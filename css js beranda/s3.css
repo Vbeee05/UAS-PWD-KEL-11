@@ -1,0 +1,488 @@
+.book-card {
+    background: white;
+    border-radius: 15px;
+    padding: 12px;
+    position: relative;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(201, 182, 182);
+}
+
+
+.favorite-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.favorite-icon:hover {
+    color: #ff4d4d;
+}
+
+.book-image {
+    margin-bottom: 12px;
+}
+
+.book-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.book-info {
+    padding: 8px 0;
+}
+
+.author {
+    color: #666;
+    font-size: 14px;
+    margin: 0 0 4px 0;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.current-price {
+    font-weight: bold;
+    color: #000;
+}
+
+.discount {
+    background: #5cb6f9;
+    color:white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.original-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.book-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.book-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+.card-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+}
+
+.bg-card{
+    background-image: url(bg\ untuk\ card.png);
+}
+
+.card-container::-webkit-scrollbar {
+    display: none; 
+}
+
+.card-container > * {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+}
+
+.judul-card-container{
+    margin-left: 2%;
+}
+
+
+.footer {
+    background-color: #5cb6f9;
+    color: #fff;
+    padding: 4rem 0 0 0;
+    font-family: 'arial', sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.footer-section {
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.footer-section p {
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: #fff;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #3498db;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #3498db;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.newsletter-form input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    flex: 1;
+}
+
+.newsletter-form button {
+    padding: 0.5rem 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #2980b9;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    padding: 1.5rem 2rem;
+    background-color:  #5cb6f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.payment-methods img {
+    height: 24px;
+    margin-left: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .payment-methods {
+        margin-top: 1rem;
+    }
+}
+
+.slider-container {
+    width: 100%;
+    max-width: 95%;
+    max-height: 500px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius:30px;
+    
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    height: 100%;
+    max-height: 500px;
+    display: block;
+    
+}
+
+.slider-nav {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border: 1px solid  rgb(201, 182, 182);
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.category-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.category-card h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.category-card p {
+    margin: 0.25rem 0 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.book-showcase {
+    padding: 2rem;
+    background-color: #fff5f8;
+}
+
+.showcase-header {
+    margin-bottom: 2rem;
+}
+
+.showcase-header h2 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.books-slider {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+
+.book-item {
+    min-width: 200px;
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.book-image {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.book-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: gold;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.favorite-btn2{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: silver;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.favorite-btn3{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #cd7f32;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.favorite-btn:hover {
+    color: #ff4081;
+}
+
+.book-info .author {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.book-info .title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.current-price {
+    font-weight: bold;
+    color: #333;
+}
+
+.discount {
+    color:white ;
+    font-size: 0.9rem;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.bg-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+                0 8px 16px rgba(0, 0, 0, 0.05);
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bg-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15),
+                0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+body::-webkit-scrollbar-thumb {
+    color: blue;
+    background-color: blue;
+}
+
+body::-webkit-scrollbar-track{
+    color: blue;
+    background-color: blue;
+}
