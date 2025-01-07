@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="link.css">
+    
+</head>
+<body>
+    <nav>
+        <div class="logo">
+        </div>
+        <div class="nav-icons">
+            <a href="#" title="Favorites" id="favBtn"><i class="fas fa-heart"></i></a>
+            <a href="#" title="Shopping Cart" id="cartBtn"><i class="fas fa-shopping-cart"></i></a>
+            <a href="v.html" title="Home"><i class="fas fa-home"></i></a>
+        </div>
+    </nav>
+
+    <div class="sidebar" id="favSidebar">
+         <div class="sidebar-header">
+             <h3>Favorites</h3>
+             <button class="close-btn">&times;</button>
+         </div>
+         <div class="sidebar-content">
+             <div id="favItems">
+             </div>
+         </div>
+     </div>
+ 
+<div class="sidebar" id="cartSidebar">
+    <div class="sidebar-header">
+        <h3>Shopping Cart</h3>
+        <button class="close-btn">&times;</button>
+    </div>
+    <div class="sidebar-content">
+        <div id="cartItems">
+        </div>
+        <div id="cartTotal">
+            <p>Total: Rp0</p>
+        </div>
+        <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+    </div>
+</div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="product-container">
+        <div class="product-image">
+            <img src="konten foto/fiksi1.jpg" alt="Novel Cover">
+        </div>
+        <div class="product-details">
+            <div class="author">Tere Liye</div>
+            <h1 class="product-title">Jengki</h1>
+            
+            <div class="price-section">
+                <div class="current-price">Rp112.500</div>
+                <div class="original-price">Rp125.000</div>
+                <div class="discount-badge">10%</div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="favorite-btn" 
+                    data-title="Jengki"
+                    data-author="Tere Liye"
+                    data-price="Rp112.500"
+                    data-image="konten foto/fiksi1.jpg"
+                    onclick="toggleFavorite(this)">
+                    <i class="fas fa-heart"></i> Favorit
+                </button>
+            </div>
+           
+            <div class="book-details">
+                <h2>Deskripsi</h2>
+                <div class="description-content">
+                    <p class="description-text" id="bookDescription">
+                        Apakah kalian punya sepeda di rumah?
+                        Apakah kalian bisa naik sepeda?
+                        
+                        Wah, seru bukan naik sepeda, lantas berkeliling di sekitar rumah, atau pergi ke taman, jalan-jalan. Bersama keluarga atau teman.
+                        
+                        Kisah buku ini tentang JENGKI, sebuah sepeda yang spesial. Dia sepeda yang amat setia, selalu menemani pemiliknya berpuluh tahun berlalu. Juga selalu bisa diandalkan. Melintasi hujan. Panas terik matahari. Membantu pemiliknya bekerja mengantar surat.
+                        
+                        Hingga suatu hari, semua harus berakhir.
+                        Kemana JENGKI akan pergi? Setelah berpisah dengan pemiliknya?
+                        Kalian ingin tahu? Mari kita baca kisah seru ini, tentang sepeda bernama JENGKI.
+                        
+                        **********
+                        
+                        Pernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar lewat lembaran buku? Membaca bukan hanya kegiatan rutin, tetapi juga petualangan tak terbatas ke dalam imajinasi dan pengetahuan. Membaca mengasah pikiran, membuka wawasan, dan memperkaya kosakata. Ini adalah pintu menuju dunia di luar kita yang tak terbatas. Tetapkan waktu khusus untuk membaca setiap hari.
+                        
+                        Dari membaca sebelum tidur hingga menyempatkan waktu di pagi hari, kebiasaan membaca dapat dibentuk dengan konsistensi. Pilih buku sesuai minat dan level literasi. Mulailah dengan buku yang sesuai dengan keinginan dan kemampuan membaca. Temukan tempat yang tenang dan nyaman untuk membaca. Lampu yang cukup, kursi yang nyaman, dan sedikit musik pelataran bisa menciptakan pengalaman membaca yang lebih baik. Bergabunglah dalam kelompok membaca atau forum literasi. Diskusikan buku yang Anda baca dan dapatkan rekomendasi dari sesama pembaca. Buat catatan atau jurnal tentang buku yang telah Anda baca.
+                        
+                        Tuliskan pemikiran, kesan, dan pelajaran yang Anda dapatkan. Libatkan keluarga dalam kegiatan membaca. Bacakan cerita untuk anak-anak atau ajak mereka membaca bersama. Ini menciptakan ikatan keluarga yang erat melalui kegiatan positif. Jangan ragu untuk menjelajahi genre baru. Terkadang, kejutan terbaik datang dari buku yang tidak pernah Anda bayangkan akan Anda nikmati. Manfaatkan teknologi dengan membaca buku digital atau bergabung dalam komunitas literasi online. Ini membuka peluang untuk terhubung dengan pembaca dari seluruh dunia.
+                    </p>
+                    <button class="read-more-btn" onclick="toggleDescription()">Baca Selengkapnya</button>
+                </div>
+            </div>
+            
+            <div class="description-modal" id="descriptionModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Deskripsi</h2>
+                        <button class="close-modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                </div>
+            </div>
+
+            <div class="store-section">
+                <h3>Toko</h3>
+                <div class="store-card">
+                    <div class="store-info">
+                        <i class="fas fa-book"></i>
+                        <span>Soft Cover</span>
+                        <span>Tere Liye</span>
+                    </div>
+                    <div class="store-price">
+                        <span class="price">Rp112.500</span>
+                        <span class="original-price">Rp125.000</span>
+                        <span class="discount">10%</span>
+                    </div>
+                    <button class="cart-btn" 
+                        data-title="Jengki"
+                        data-price="Rp112.500"
+                        data-format="Soft Cover"
+                        onclick="addToCart(this)">+ Keranjang</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="book-details">
+        <h2>Detail Buku</h2>
+        
+        <div class="details-grid">
+            <div class="detail-item">
+                <div class="detail-label">Penerbit</div>
+                <div class="detail-value">
+                    <a href="#" class="publisher-link">Elex Media Komputindo</a>
+                </div>
+            </div>
+    
+            <div class="detail-item">
+                <div class="detail-label">Tanggal Terbit</div>
+                <div class="detail-value">29 Okt 2024</div>
+            </div>
+    
+            <div class="detail-item">
+                <div class="detail-label">ISBN</div>
+                <div class="detail-value">9786230061196</div>
+            </div>
+    
+            <div class="detail-item">
+                <div class="detail-label">Halaman</div>
+                <div class="detail-value">208</div>
+            </div>
+    
+            <div class="detail-item">
+                <div class="detail-label">Bahasa</div>
+                <div class="detail-value">Indonesia</div>
+            </div>
+    
+            <div class="detail-item">
+                <div class="detail-label">Panjang</div>
+                <div class="detail-value">18.0 cm</div>
+            </div>
+    
+            <div class="detail-item">
+                <div class="detail-label">Lebar</div>
+                <div class="detail-value">12.0 cm</div>
+            </div>
+    
+            <div class="detail-item">
+                <div class="detail-label">Berat</div>
+                <div class="detail-value">0.135 kg</div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <h2 style="margin: 3%;">Lainnya</h2>
+<div class="product-scroll">
+    <div class="product-card">
+        <div class="favorite-icon">
+            <i class="fas fa-heart"></i>
+        </div>
+        <a href="link31.html"><img src="konten foto/edukasi1.jpg" alt="Laut Bercerita"></a>
+        <div class="product-info">
+            <div class="author">Leila S. Chudori</div>
+            <h3 class="title">Laut Bercerita</h3>
+            <div class="price-info">
+                <span class="current-price">Rp86.250</span>
+                <span class="original-price">Rp115.000</span>
+                <span class="discount-tag">25%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="favorite-icon">
+            <i class="fas fa-heart"></i>
+        </div>
+        <a href="link20.html"><img src="konten foto/fiksi10.jpg" alt="Pulang-Pergi"></a>
+        <div class="product-info">
+            <div class="author">Tere Liye</div>
+            <h3 class="title">Pulang-Pergi</h3>
+            <div class="price-info">
+                <span class="current-price">Rp82.500</span>
+                <span class="original-price">Rp110.000</span>
+                <span class="discount-tag">25%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="favorite-icon">
+            <i class="fas fa-heart"></i>
+        </div>
+        <a href="link21.html"><img src="konten foto/novel1.jpg" alt="Atomic Habits"></a>
+        <div class="product-info">
+            <div class="author">James Clear</div>
+            <h3 class="title">Atomic Habits</h3>
+            <div class="price-info">
+                <span class="current-price">Rp89.250</span>
+                <span class="original-price">Rp119.000</span>
+                <span class="discount-tag">25%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="favorite-icon">
+            <i class="fas fa-heart"></i>
+        </div>
+        <a href="link30.html"><img src="konten foto/novel10.jpg" alt="Rich Dad Poor Dad"></a>
+        <div class="product-info">
+            <div class="author">Robert T. Kiyosaki</div>
+            <h3 class="title">Rich Dad Poor Dad</h3>
+            <div class="price-info">
+                <span class="current-price">Rp71.250</span>
+                <span class="original-price">Rp95.000</span>
+                <span class="discount-tag">25%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="favorite-icon">
+            <i class="fas fa-heart"></i>
+        </div>
+        <a href="link15.html"><img src="konten foto/fiksi5.jpg" alt="Filosofi Teras"></a>
+        <div class="product-info">
+            <div class="author">Henry Manampiring</div>
+            <h3 class="title">Filosofi Teras</h3>
+            <div class="price-info">
+                <span class="current-price">Rp74.250</span>
+                <span class="original-price">Rp99.000</span>
+                <span class="discount-tag">25%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="favorite-icon">
+            <i class="fas fa-heart"></i>
+        </div>
+        <a href="link13.html"><img src="konten foto/fiksi3.jpg" alt="Psychology of Money"></a>
+        <div class="product-info">
+            <div class="author">Morgan Housel</div>
+            <h3 class="title">Psychology of Money</h3>
+            <div class="price-info">
+                <span class="current-price">Rp86.250</span>
+                <span class="original-price">Rp115.000</span>
+                <span class="discount-tag">25%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="favorite-icon">
+            <i class="fas fa-heart"></i>
+        </div>
+        <a href="link19.html"><img src="konten foto/fiksi9.avif" alt="Sebuah Seni untuk Bersikap Bodo Amat"></a>
+        <div class="product-info">
+            <div class="author">Mark Manson</div>
+            <h3 class="title">Sebuah Seni untuk Bersikap Bodo Amat</h3>
+            <div class="price-info">
+                <span class="current-price">Rp67.500</span>
+                <span class="original-price">Rp90.000</span>
+                <span class="discount-tag">25%</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<div class="product-scroll">
+    <div class="product-card">
+        <div class="favorite-icon">
+            <i class="fas fa-heart"></i>
+        </div>
+        <a href="link23.html"><img src="konten foto/novel3.jpg" alt="Laut Bercerita"></a>
+        <div class="product-info">
+            <div class="author">Leila S. Chudori</div>
+            <h3 class="title">Laut Bercerita</h3>
+            <div class="price-info">
+                <span class="current-price">Rp86.250</span>
+                <span class="original-price">Rp115.000</span>
+                <span class="discount-tag">25%</span>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="favorite-icon">
+            <i class="fas fa-heart"></i>
+        </div>
+        <a href="link33.html"><img src="konten foto/edukasi3.jpg" alt="Atomic Habits"></a>
+        <div class="product-info">
+            <div class="author">James Clear</div>
+            <h3 class="title">Atomic Habits</h3>
+            <div class="price-info">
+                <span class="current-price">Rp86.250</span>
+                <span class="original-price">Rp115.000</span>
+                <span class="discount-tag">25%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="favorite-icon">
+            <i class="fas fa-heart"></i>
+        </div>
+        <a href="link37.html"><img src="konten foto/edukasi7.jpg" alt="Rich Dad Poor Dad"></a>
+        <div class="product-info">
+            <div class="author">Robert T. Kiyosaki</div>
+            <h3 class="title">Rich Dad Poor Dad</h3>
+            <div class="price-info">
+                <span class="current-price">Rp67.500</span>
+                <span class="original-price">Rp90.000</span>
+                <span class="discount-tag">25%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="favorite-icon">
+            <i class="fas fa-heart"></i>
+        </div>
+        <a href="link12.html"><img src="konten foto/fiksi2.jpg" alt="Filosofi Teras"></a>
+        <div class="product-info">
+            <div class="author">Henry Manampiring</div>
+            <h3 class="title">Filosofi Teras</h3>
+            <div class="price-info">
+                <span class="current-price">Rp75.000</span>
+                <span class="original-price">Rp100.000</span>
+                <span class="discount-tag">25%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="favorite-icon">
+            <i class="fas fa-heart"></i>
+        </div>
+        <a href="link7.html"><img src="konten foto/kids7.jpg" alt="Think and Grow Rich"></a>
+        <div class="product-info">
+            <div class="author">Napoleon Hill</div>
+            <h3 class="title">Think and Grow Rich</h3>
+            <div class="price-info">
+                <span class="current-price">Rp82.500</span>
+                <span class="original-price">Rp110.000</span>
+                <span class="discount-tag">25%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="favorite-icon">
+            <i class="fas fa-heart"></i>
+        </div>
+        <a href="link29.html"><img src="konten foto/novel9.jpg" alt="Psychology of Money"></a>
+        <div class="product-info">
+            <div class="author">Morgan Housel</div>
+            <h3 class="title">Psychology of Money</h3>
+            <div class="price-info">
+                <span class="current-price">Rp86.250</span>
+                <span class="original-price">Rp115.000</span>
+                <span class="discount-tag">25%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="favorite-icon">
+            <i class="fas fa-heart"></i>
+        </div>
+        <a href="link8.html"> <img src="konten foto/kids8.jpg" alt="Sebuah Seni untuk Bersikap Bodo Amat"></a>
+        <div class="product-info">
+            <div class="author">Mark Manson</div>
+            <h3 class="title">Sebuah Seni untuk Bersikap Bodo Amat</h3>
+            <div class="price-info">
+                <span class="current-price">Rp67.500</span>
+                <span class="original-price">Rp90.000</span>
+                <span class="discount-tag">25%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="favorite-icon">
+            <i class="fas fa-heart"></i>
+        </div>
+        <a href="link17.html"><img src="konten foto/fiksi7.png" alt="Zero to One"></a>
+        <div class="product-info">
+            <div class="author">Peter Thiel</div>
+            <h3 class="title">Zero to One</h3>
+            <div class="price-info">
+                <span class="current-price">Rp24.000</span>
+                <span class="original-price">Rp48.000</span>
+                <span class="discount-tag">50%</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="link.js"></script>
+</body>
+</html>

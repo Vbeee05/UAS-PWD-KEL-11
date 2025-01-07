@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        html {
+            background-image: url(bg.png);
+            
+        }
+
+        html::-webkit-scrollbar{
+            display: none;
+        }
+.book-card {
+    background: white;
+    border-radius: 15px;
+    padding: 12px;
+    position: relative;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(201, 182, 182);
+}
+
+.favorite-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.favorite-icon:hover {
+    color: #ff4d4d;
+}
+
+.book-image {
+    margin-bottom: 12px;
+}
+
+.book-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.book-info {
+    padding: 8px 0;
+}
+
+.author {
+    color: #666;
+    font-size: 14px;
+    margin: 0 0 4px 0;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.current-price {
+    font-weight: bold;
+    color: #000;
+}
+
+.discount {
+    background: #5cb6f9;
+    color:white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.original-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.book-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.book-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+.card-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; 
+}
+
+.card-container::-webkit-scrollbar {
+    display: none; 
+}
+
+.card-container > * {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+}
+    </style>
+</head>
+<body>
+    <div class="bg-card">
+        <div class="card-container">
+            <div class="book-card">
+                <div class="favorite-icon">❤</div>
+                <div class="book-image">
+                   <a href="link10.html"> <img src="content foto buku/ff1.avif" alt="Book Title"></a>
+                </div>
+                <div class="book-info">
+                    <p class="author">HAZUKI MINASE, ITSUKI KAMEYA</p>
+                    <h3 class="title">Final Fantasy : Lost Stranger 01</h3>
+                    <div class="price-container">
+                        <span class="current-price">Rp24.000</span>
+                        <span class="discount">50%</span>
+                        <span class="original-price">Rp48.000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="book-card">
+                <div class="favorite-icon">❤</div>
+                <div class="book-image">
+                    <a href="link2.html"> <img src="content foto buku/ff2.avif" alt="Book Title"></a>
+                </div>
+                <div class="book-info">
+                    <p class="author">HAZUKI MINASE, ITSUKI KAMEYA</p>
+                    <h3 class="title">Final Fantasy : Lost Stranger 02</h3>
+                    <div class="price-container">
+                        <span class="current-price">Rp24.000</span>
+                        <span class="discount">50%</span>
+                        <span class="original-price">Rp48.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="favorite-icon">❤</div>
+                <div class="book-image">
+                    <a href="link3.html">  <img src="content foto buku/ff3.avif" alt="Book Title"></a>
+                </div>
+                <div class="book-info">
+                    <p class="author">HAZUKI MINASE, ITSUKI KAMEYA</p>
+                    <h3 class="title">Final Fantasy : Lost Stranger 03</h3>
+                    <div class="price-container">
+                        <span class="current-price">Rp24.000</span>
+                        <span class="discount">50%</span>
+                        <span class="original-price">Rp48.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="favorite-icon">❤</div>
+                <div class="book-image">
+                    <a href="link4.html">  <img src="content foto buku/ff4.avif" alt="Book Title"></a>
+                </div>
+                <div class="book-info">
+                    <p class="author">HAZUKI MINASE, ITSUKI KAMEYA</p>
+                    <h3 class="title">Final Fantasy : Lost Stranger 04</h3>
+                    <div class="price-container">
+                        <span class="current-price">Rp24.000</span>
+                        <span class="discount">50%</span>
+                        <span class="original-price">Rp48.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="favorite-icon">❤</div>
+                <div class="book-image">
+                    <a href="link8.html"> <img src="content foto buku/ff5.avif" alt="Book Title"></a>
+                </div>
+                <div class="book-info">
+                    <p class="author">HAZUKI MINASE, ITSUKI KAMEYA</p>
+                    <h3 class="title">Final Fantasy : Lost Stranger 05</h3>
+                    <div class="price-container">
+                        <span class="current-price">Rp24.000</span>
+                        <span class="discount">50%</span>
+                        <span class="original-price">Rp48.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="bg-card">
+        <div class="card-container">
+            <div class="book-card">
+                <div class="favorite-icon">❤</div>
+                <div class="book-image">
+                    <a href="link6.html">    <img src="content foto buku/ff6.avif" alt="Book Title"></a>
+                </div>
+                <div class="book-info">
+                    <p class="author">HAZUKI MINASE, ITSUKI KAMEYA</p>
+                    <h3 class="title">Final Fantasy : Lost Stranger 06</h3>
+                    <div class="price-container">
+                        <span class="current-price">Rp24.000</span>
+                        <span class="discount">50%</span>
+                        <span class="original-price">Rp48.000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="book-card">
+                <div class="favorite-icon">❤</div>
+                <div class="book-image">
+                    <a href="link7.html">   <img src="content foto buku/ff7.avif" alt="Book Title"></a>
+                </div>
+                <div class="book-info">
+                    <p class="author">HAZUKI MINASE, ITSUKI KAMEYA</p>
+                    <h3 class="title">Final Fantasy : Lost Stranger 07 </h3>
+                    <div class="price-container">
+                        <span class="current-price">Rp24.000</span>
+                        <span class="discount">50%</span>
+                        <span class="original-price">Rp48.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="favorite-icon">❤</div>
+                <div class="book-image">
+                    <a href="link5.html">   <img src="content foto buku/ff8.avif" alt="Book Title"></a>
+                </div>
+                <div class="book-info">
+                    <p class="author">HAZUKI MINASE, ITSUKI KAMEYA</p>
+                    <h3 class="title">Final Fantasy : Lost Stranger 08</h3>
+                    <div class="price-container">
+                        <span class="current-price">Rp24.000</span>
+                        <span class="discount">50%</span>
+                        <span class="original-price">Rp48.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="favorite-icon">❤</div>
+                <div class="book-image">
+                    <a href="link9.html"> <img src="content foto buku/ff9.avif" alt="Book Title"></a>
+                </div>
+                <div class="book-info">
+                    <p class="author">HAZUKI MINASE, ITSUKI KAMEYA</p>
+                    <h3 class="title">Final Fantasy : Lost Stranger 09</h3>
+                    <div class="price-container">
+                        <span class="current-price">Rp24.000</span>
+                        <span class="discount">50%</span>
+                        <span class="original-price">Rp48.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="favorite-icon">❤</div>
+                <div class="book-image">
+                    <a href="link1.html">  <img src="content foto buku/ff10.avif" alt="Book Title"></a>
+                </div>
+                <div class="book-info">
+                    <p class="author">HAZUKI MINASE, ITSUKI KAMEYA</p>
+                    <h3 class="title">Final Fantasy : Lost Stranger 10</h3>
+                    <div class="price-container">
+                        <span class="current-price">Rp24.000</span>
+                        <span class="discount">50%</span>
+                        <span class="original-price">Rp48.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

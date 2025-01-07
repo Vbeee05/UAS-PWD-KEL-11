@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+     <style>
+
+        html {
+            background-image: url();
+            
+        }
+
+        html::-webkit-scrollbar{
+            display: none;
+        }
+.book-card {
+    background: white;
+    border-radius: 15px;
+    padding: 12px;
+    position: relative;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(201, 182, 182);
+}
+
+.favorite-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.favorite-icon:hover {
+    color: #ff4d4d;
+}
+
+.book-image {
+    margin-bottom: 12px;
+}
+
+.book-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.book-info {
+    padding: 8px 0;
+}
+
+.author {
+    color: #666;
+    font-size: 14px;
+    margin: 0 0 4px 0;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.current-price {
+    font-weight: bold;
+    color: #000;
+}
+
+.discount {
+    background: #5cb6f9;
+    color:white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.original-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.book-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.book-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+.card-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; 
+}
+
+.card-container::-webkit-scrollbar {
+    display: none; 
+}
+
+.card-container > * {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+}
+    </style>
+</head>
+<body>
+    <div class="bg-card">
+        <div class="card-container">
+            <div class="book-card">
+                <div class="favorite-icon">❤</div>
+                <div class="book-image">
+                   <a href="link10.html"> <img src="konten foto/kids10.jpg" alt="Book Title"></a>
+                </div>
+                <div class="book-info">
+                    <p class="author">Peter Thiel</p>
+                    <h3 class="title">Zero To One</h3>
+                    <div class="price-container">
+                        <span class="current-price">Rp66.000</span>
+                        <span class="discount">25%</span>
+                        <span class="original-price">Rp88.000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="book-card">
+                <div class="favorite-icon">❤</div>
+                <div class="book-image">
+                    <a href="link2.html"> <img src="konten foto/kids2.jpg" alt="Book Title"></a>
+                </div>
+                <div class="book-info">
+                    <p class="author">Peter Thiel</p>
+                    <h3 class="title">Zero To One</h3>
+                    <div class="price-container">
+                        <span class="current-price">Rp66.000</span>
+                        <span class="discount">25%</span>
+                        <span class="original-price">Rp88.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="favorite-icon">❤</div>
+                <div class="book-image">
+                    <a href="link3.html">  <img src="konten foto/kids3.jpg" alt="Book Title"></a>
+                </div>
+                <div class="book-info">
+                    <p class="author">Peter Thiel</p>
+                    <h3 class="title">Zero To One</h3>
+                    <div class="price-container">
+                        <span class="current-price">Rp66.000</span>
+                        <span class="discount">25%</span>
+                        <span class="original-price">Rp88.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="favorite-icon">❤</div>
+                <div class="book-image">
+                    <a href="link4.html">  <img src="konten foto/kids4.jpg" alt="Book Title"></a>
+                </div>
+                <div class="book-info">
+                    <p class="author">Peter Thiel</p>
+                    <h3 class="title">Zero To One</h3>
+                    <div class="price-container">
+                        <span class="current-price">Rp66.000</span>
+                        <span class="discount">25%</span>
+                        <span class="original-price">Rp88.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="favorite-icon">❤</div>
+                <div class="book-image">
+                    <a href="link8.html"> <img src="konten foto/kids8.jpg" alt="Book Title"></a>
+                </div>
+                <div class="book-info">
+                    <p class="author">Peter Thiel</p>
+                    <h3 class="title">Zero To One</h3>
+                    <div class="price-container">
+                        <span class="current-price">Rp66.000</span>
+                        <span class="discount">25%</span>
+                        <span class="original-price">Rp88.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="bg-card">
+        <div class="card-container">
+            <div class="book-card">
+                <div class="favorite-icon">❤</div>
+                <div class="book-image">
+                    <a href="link6.html">    <img src="konten foto/kids6.jpg" alt="Book Title"></a>
+                </div>
+                <div class="book-info">
+                    <p class="author">Peter Thiel</p>
+                    <h3 class="title">Zero To One</h3>
+                    <div class="price-container">
+                        <span class="current-price">Rp66.000</span>
+                        <span class="discount">25%</span>
+                        <span class="original-price">Rp88.000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="book-card">
+                <div class="favorite-icon">❤</div>
+                <div class="book-image">
+                    <a href="link7.html">   <img src="konten foto/kids7.jpg" alt="Book Title"></a>
+                </div>
+                <div class="book-info">
+                    <p class="author">Peter Thiel</p>
+                    <h3 class="title">Zero To One</h3>
+                    <div class="price-container">
+                        <span class="current-price">Rp66.000</span>
+                        <span class="discount">25%</span>
+                        <span class="original-price">Rp88.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="favorite-icon">❤</div>
+                <div class="book-image">
+                    <a href="link5.html">   <img src="konten foto/kids5.jpg" alt="Book Title"></a>
+                </div>
+                <div class="book-info">
+                    <p class="author">Peter Thiel</p>
+                    <h3 class="title">Zero To One</h3>
+                    <div class="price-container">
+                        <span class="current-price">Rp66.000</span>
+                        <span class="discount">25%</span>
+                        <span class="original-price">Rp88.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="favorite-icon">❤</div>
+                <div class="book-image">
+                    <a href="link9.html"> <img src="konten foto/kids9.jpg" alt="Book Title"></a>
+                </div>
+                <div class="book-info">
+                    <p class="author">Peter Thiel</p>
+                    <h3 class="title">Zero To One</h3>
+                    <div class="price-container">
+                        <span class="current-price">Rp66.000</span>
+                        <span class="discount">25%</span>
+                        <span class="original-price">Rp88.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="favorite-icon">❤</div>
+                <div class="book-image">
+                    <a href="link1.html">  <img src="konten foto/kids1.jpg" alt="Book Title"></a>
+                </div>
+                <div class="book-info">
+                    <p class="author">Peter Thiel</p>
+                    <h3 class="title">Zero To One</h3>
+                    <div class="price-container">
+                        <span class="current-price">Rp66.000</span>
+                        <span class="discount">25%</span>
+                        <span class="original-price">Rp88.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

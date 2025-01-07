@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen -  Responsive navbar css-only sticky top</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" /><link rel="stylesheet" href="css js beranda/s.css">
+	<link rel="stylesheet" href="css js beranda/s1.css">
+	<link rel="stylesheet" href="css js beranda/s3.css">
+	<script src="css js beranda/vs card.js"></script>
+
+</head>
+<body>
+<header class="header">
+	<div class="page-wrapper">
+		<div class="content-wrapper">
+			<input type="radio" name="toggle" id="toggle1">
+			<input type="radio" name="toggle" id="toggle2">
+		  <input type="radio" name="toggle" id="toggle3">
+		  <section id="section-1">
+			<div class="image-container">
+			  <img src="logo/pustaka pedia.png" alt="">
+			</div>
+			<div class="info-container">
+			  <h2>SELAMAT DATANG.</h2>
+			  <label for="toggle2">Click Me.</label>
+			</div>
+		  </section>
+		  <section id="section-2">
+			<div class="image-container">
+			  <img src="logo/slogan logo.png" alt="">
+			</div>
+			<div class="info-container">
+			  <h2>SELAMAT BERBELANJA.</h2>
+			  <label for="toggle3">Click Me.</label>
+			</div>
+		  </section>
+		</div>
+		  </div>
+</header>
+
+<nav class="sticky navbar">
+	<div class="brand  display__logo">
+		<a href="#top" class="nav__link"> <span class="logo"><img src="logo/pustaka pedia cut.png" alt="" height="40" width="130"></span></a>
+	</div>
+
+	<input type="checkbox" id="nav" class="hidden" />
+	<label for="nav" class="nav__open"><i></i><i></i><i></i></label>
+	
+	<div class="nav">
+		<ul class="nav__items">
+			
+			<li class="nav__item"><a href="#home" class="nav__link"><b>HOME</b></a></li>
+			<li class="nav__item"><a href="#about" class="nav__link"><b>BUKU</b></a></li>
+			<li class="nav__item"><a href="#portfolio" class="nav__link"><b>FAVORIT</b></a></li>
+			<li class="nav__item"><a href="#contact" class="nav__link"><b>BLOG</b></a></li>
+		
+		</ul>
+	</div>
+</nav>
+<br>
+<main>
+	<section class="home">
+		<div id="home">
+<div class="slider-container">
+    <div class="slider">
+        <div class="slide">
+            <a href="diskon50%.html"><img src="poster slide/poster ff.png" alt="Promo 1"></a>
+        </div>
+        <div class="slide">
+            <img src="poster slide/poster timun jlita.png" alt="Promo 2">
+        </div>
+        <div class="slide">
+            <a href="mini game/game.html"><img src="poster slide/promo card.png" alt="Promo 3"></a>
+        </div>
+        <div class="slide">
+            <img src="poster slide/poster pustaka.png" alt="Promo 4">
+        </div>
+        <div class="slide">
+            <img src="poster slide/poster sherlock.png" alt="Promo 5">
+        </div>
+    </div>
+    
+    <div class="slider-nav">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</div>
+
+
+<div class="category-container">
+    <div class="category-card">
+        <div class="category-icon">
+            <a style="text-decoration: none;" href="kids kategori.html"><img src="logo category/1.png" alt="Buku Baru">
+        </div>
+        <h3>Kids</h3>
+        <p>Buku Anak Kecil</p>
+	</a>
+    </div>
+
+    <div class="category-card">
+        <div class="category-icon">
+			<a style="text-decoration: none;" href="fiksi category.html"><img src="logo category/2.png" alt="International Books">
+        </div>
+        <h3>Fiksi</h3>
+        <p>Buku Cerita Fiksi</p>
+	</a>
+    </div>
+
+    <div class="category-card">
+        <div class="category-icon">
+            <a style="text-decoration: none;" href="novel category.html"><img src="logo category/3.png" alt="Majalah">
+        </div>
+        <h3>Novel</h3>
+        <p>Buku Novel</p>
+	</a>
+    </div>
+
+    <div class="category-card">
+        <div class="category-icon">
+			<a style="text-decoration: none;" href="edukasi.html"><img src="logo category/4.png" alt="Stationery">
+        </div>
+        <h3>Edukasi</h3>
+        <p>Buku Pelajaran atau Kursus</p>
+	</a>
+    </div>
+
+    <div class="category-card">
+        <div class="category-icon">
+            <a style="text-decoration: none;" href="non-book category.html"> <img src="logo category/5.png" alt="Olahraga">
+        </div>
+        <h3>Non-Book</h3>
+		<p>Barang-Barang</p>
+	</a>
+    </div>
+</div>
+</section>
+<br>
+<br>
+<br>
+	
+	<h2 class="judul-card-container" id="bestsellers"><p style="font-family: arial;">BUKU TERLARIS</p></h2>
+	<section class="about">
+		<div id="about">
+			<div class="bg-card">
+			<div class="card-container">
+			<div class="book-card">
+				<div class="favorite-icon">❤</div>
+				<div class="book-image">
+					<a href="l-jjk.html"><img src="category terlaris/terlaris1.png" alt="Book Title"></a>
+				</div>
+				<div class="book-info">
+					<p class="author">Peter Thiel</p>
+					<h3 class="title">Zero To One</h3>
+					<div class="price-container">
+						<span class="current-price">Rp66.000</span>
+						<span class="discount">25%</span>
+						<span class="original-price">Rp88.000</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="book-card">
+				<div class="favorite-icon">❤</div>
+				<div class="book-image">
+					<a href="link22.html"><img src="category terlaris/terlaris2.png" alt="Book Title"></a>
+				</div>
+				<div class="book-info">
+					<p class="author">Peter Thiel</p>
+					<h3 class="title">Zero To One</h3>
+					<div class="price-container">
+						<span class="current-price">Rp66.000</span>
+						<span class="discount">25%</span>
+						<span class="original-price">Rp88.000</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="book-card">
+				<div class="favorite-icon">❤</div>
+				<div class="book-image">
+					<a href="link22.html"><img src="category terlaris/terlaris3.png" alt="Book Title"></a>
+				</div>
+				<div class="book-info">
+					<p class="author">Peter Thiel</p>
+					<h3 class="title">Zero To One</h3>
+					<div class="price-container">
+						<span class="current-price">Rp66.000</span>
+						<span class="discount">25%</span>
+						<span class="original-price">Rp88.000</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="book-card">
+				<div class="favorite-icon">❤</div>
+				<div class="book-image">
+					<a href=""></a><img src="category terlaris/terlaris4.png" alt="Book Title">
+				</div>
+				<div class="book-info">
+					<p class="author">Peter Thiel</p>
+					<h3 class="title">Zero To One</h3>
+					<div class="price-container">
+						<span class="current-price">Rp66.000</span>
+						<span class="discount">25%</span>
+						<span class="original-price">Rp88.000</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="book-card">
+				<div class="favorite-icon">❤</div>
+				<div class="book-image">
+					<a href="link22.html"><img src="category terlaris/terlaris5.png" alt="Book Title"></a>
+				</div>
+				<div class="book-info">
+					<p class="author">Peter Thiel</p>
+					<h3 class="title">Zero To One</h3>
+					<div class="price-container">
+						<span class="current-price">Rp66.000</span>
+						<span class="discount">25%</span>
+						<span class="original-price">Rp88.000</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="book-card">
+				<div class="favorite-icon">❤</div>
+				<div class="book-image">
+					<a href="link33.html"><img src="category terlaris/terlaris6.png" alt="Book Title"></a>
+				</div>
+				<div class="book-info">
+					<p class="author">Peter Thiel</p>
+					<h3 class="title">Zero To One</h3>
+					<div class="price-container">
+						<span class="current-price">Rp66.000</span>
+						<span class="discount">25%</span>
+						<span class="original-price">Rp88.000</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="book-card">
+				<div class="favorite-icon">❤</div>
+				<div class="book-image">
+					<a href="link22.html"></a><img src="category terlaris/terlaris7.png" alt="Book Title"></a>
+				</div>
+				<div class="book-info">
+					<p class="author">Peter Thiel</p>
+					<h3 class="title">Zero To One</h3>
+					<div class="price-container">
+						<span class="current-price">Rp66.000</span>
+						<span class="discount">25%</span>
+						<span class="original-price">Rp88.000</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="book-card">
+				<div class="favorite-icon">❤</div>
+				<div class="book-image">
+				<a href="link22.html"><img src="category terlaris/terlaris8.png" alt="Book Title"></a>
+				</div>
+				<div class="book-info">
+					<p class="author">Peter Thiel</p>
+					<h3 class="title">Zero To One</h3>
+					<div class="price-container">
+						<span class="current-price">Rp66.000</span>
+						<span class="discount">25%</span>
+						<span class="original-price">Rp88.000</span>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		<br>
+
+		<h2 class="judul-card-container" id="new-releases" style="font-family: Arial, Helvetica, sans-serif;">BUKU TERBARU</h2>
+		<div class="bg-card">
+		<div class="card-container">
+			<div class="book-card">
+				<div class="favorite-icon">❤</div>
+				<div class="book-image">
+					<a href="link22.html"><img src="konten foto/edukasi2.jpg" alt="Book Title"></a>
+				</div>
+				<div class="book-info">
+					<p class="author">Peter Thiel</p>
+					<h3 class="title">Zero To One</h3>
+					<div class="price-container">
+						<span class="current-price">Rp66.000</span>
+						<span class="discount">25%</span>
+						<span class="original-price">Rp88.000</span>
+					</div>
+				</div>
+			</div>
+			
+		
+			<div class="book-card">
+				<div class="favorite-icon">❤</div>
+				<div class="book-image">
+					<a href="link22.html"><img src="konten foto/fiksi1.jpg" alt="Book Title"></a>
+				</div>
+				<div class="book-info">
+					<p class="author">Peter Thiel</p>
+					<h3 class="title">Zero To One</h3>
+					<div class="price-container">
+						<span class="current-price">Rp66.000</span>
+						<span class="discount">25%</span>
+						<span class="original-price">Rp88.000</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="book-card">
+				<div class="favorite-icon">❤</div>
+				<div class="book-image">
+					<a href="link22.html"><img src="konten foto/novel8.jpg" alt="Book Title"></a>
+				</div>
+				<div class="book-info">
+					<p class="author">Peter Thiel</p>
+					<h3 class="title">Zero To One</h3>
+					<div class="price-container">
+						<span class="current-price">Rp66.000</span>
+						<span class="discount">25%</span>
+						<span class="original-price">Rp88.000</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="book-card">
+				<div class="favorite-icon">❤</div>
+				<div class="book-image">
+					<a href="link22.html"><img src="konten foto/novel9.jpg" alt="Book Title"></a>
+				</div>
+				<div class="book-info">
+					<p class="author">Peter Thiel</p>
+					<h3 class="title">Zero To One</h3>
+					<div class="price-container">
+						<span class="current-price">Rp66.000</span>
+						<span class="discount">25%</span>
+						<span class="original-price">Rp88.000</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="book-card">
+				<div class="favorite-icon">❤</div>
+				<div class="book-image">
+					<a href="link22.html"><img src="konten foto/fiksi6.jpeg" alt="Book Title"></a>
+				</div>
+				<div class="book-info">
+					<p class="author">Peter Thiel</p>
+					<h3 class="title">Zero To One</h3>
+					<div class="price-container">
+						<span class="current-price">Rp66.000</span>
+						<span class="discount">25%</span>
+						<span class="original-price">Rp88.000</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="book-card">
+				<div class="favorite-icon">❤</div>
+				<div class="book-image">
+				<a href="link22.html"><img src="konten foto/fiksi7.png" alt="Book Title"></a>
+				</div>
+				<div class="book-info">
+					<p class="author">Peter Thiel</p>
+					<h3 class="title">Zero To One</h3>
+					<div class="price-container">
+						<span class="current-price">Rp66.000</span>
+						<span class="discount">25%</span>
+						<span class="original-price">Rp88.000</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="book-card">
+				<div class="favorite-icon">❤</div>
+				<div class="book-image">
+					<a href="link22.html"></a><img src="konten foto/fiksi2.jpg" alt="Book Title"></a>
+				</div>
+				<div class="book-info">
+					<p class="author">Peter Thiel</p>
+					<h3 class="title">Zero To One</h3>
+					<div class="price-container">
+						<span class="current-price">Rp66.000</span>
+						<span class="discount">25%</span>
+						<span class="original-price">Rp88.000</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="book-card">
+				<div class="favorite-icon">❤</div>
+				<div class="book-image">
+					<a href="link22.html"><img src="konten foto/fiksi10.jpg" alt="Book Title"></a>
+				</div>
+				<div class="book-info">
+					<p class="author">Peter Thiel</p>
+					<h3 class="title">Zero To One</h3>
+					<div class="price-container">
+						<span class="current-price">Rp66.000</span>
+						<span class="discount">25%</span>
+						<span class="original-price">Rp88.000</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+<br>
+		</div>
+	</section>
+	<section class="portfolio">
+		<div id="portfolio">
+<div class="book-showcase">
+    <div class="showcase-header">
+        <h2 style="color:rgb(255, 86, 114);">BACAAN FAVORIT PEKAN INI!</h2>
+    </div>
+    
+    <div class="books-slider">
+        <div class="book-item">
+            <div class="book-image">
+                <a href="link22.html"><img src="content foto buku/ff2.avif" alt="Kastel Terpencil di Dalam Cermin"></a>
+                <button class="favorite-btn">1</button>
+            </div>
+            <div class="book-info">
+                <p class="author">HAZUKI MINASE, ITSUKI KAMEYA</p>
+                <h3 class="title">Final Fantasy : Lost Stranger 02</h3>
+                <p class="price">
+                    <span class="current-price">Rp24.000</span>
+                    <span class="discount">50%</span>
+                    <span class="original-price">Rp48.000</span>
+                </p>
+            </div>
+        </div>
+		<div class="book-item">
+            <div class="book-image">
+                <a href="link22.html"><img src="konten foto/novel10.jpg" alt="Kastel Terpencil di Dalam Cermin"></a>
+                <button class="favorite-btn2">2</button>
+            </div>
+            <div class="book-info">
+                <p class="author">Mizuki Tsujimura</p>
+                <h3 class="title">Kastel Terpencil di Dalam Cermin</h3>
+                <p class="price">
+                    <span class="current-price">Rp88.000</span>
+                    <span class="discount">20%</span>
+                    <span class="original-price">Rp110.000</span>
+                </p>
+            </div>
+        </div>
+		<div class="book-item">
+            <div class="book-image">
+               <a href="link22.html"><img src="konten foto/fiksi4.jpg" alt="Kastel Terpencil di Dalam Cermin"></a>
+                <button class="favorite-btn3">3</button>
+            </div>
+            <div class="book-info">
+                <p class="author">Mizuki Tsujimura</p>
+                <h3 class="title">Kastel Terpencil di Dalam Cermin</h3>
+                <p class="price">
+                    <span class="current-price">Rp88.000</span>
+                    <span class="discount">20%</span>
+                    <span class="original-price">Rp110.000</span>
+                </p>
+            </div>
+        </div>
+		<div class="book-item">
+            <div class="book-image">
+              <a href="link22.html"> <img src="konten foto/novel9.jpg" alt="Kastel Terpencil di Dalam Cermin"></a>
+              
+            </div>
+            <div class="book-info">
+                <p class="author">Mizuki Tsujimura</p>
+                <h3 class="title">Kastel Terpencil di Dalam Cermin</h3>
+                <p class="price">
+                    <span class="current-price">Rp88.000</span>
+                    <span class="discount">20%</span>
+                    <span class="original-price">Rp110.000</span>
+                </p>
+            </div>
+        </div>
+		<div class="book-item">
+            <div class="book-image">
+                <a href="link22.html"><img src="konten foto/novel4.jpg" alt="Kastel Terpencil di Dalam Cermin"></a>
+            </div>
+            <div class="book-info">
+                <p class="author">Mizuki Tsujimura</p>
+                <h3 class="title">Kastel Terpencil di Dalam Cermin</h3>
+                <p class="price">
+                    <span class="current-price">Rp88.000</span>
+                    <span class="discount">20%</span>
+                    <span class="original-price">Rp110.000</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+		</div>
+	</section>
+	<section class="contact">
+		<h2 style="margin-left: 25px;">Our Blog</h2>
+		<div id="contact">
+			<div class="books-slider">
+				<div class="book-item">
+					<div class="book-image">
+						<img src="berita1.webp" alt="Kastel Terpencil di Dalam Cermin">
+					</div>
+					<div class="book-info">
+					
+						<h3 class="title">5 Rekomendasi Buku Anak yang Edukatif dan Menarik</h3>
+						<p class="author">Membaca buku anak bukan hanya aktivitas menyenangkan, 
+							<br>tetapi juga sangat penting untuk perkembangan kognitif,...</p>
+						<p class="price">
+							<a href="berita1.html"><button class="card-btn">Lihat Selengkap Nya</button></a>
+						</p>
+					</div>
+				</div>
+				<div class="book-item">
+					<div class="book-image">
+						<img src="berita2.webp" alt="Kastel Terpencil di Dalam Cermin">
+					</div>
+					<br>
+					<div class="book-info">
+						<h3 class="title">Kastel Terpencil di Dalam Cermin</h3>
+						<p class="author">Benarkah cinta sejati akan menemukan 'rumah'nya sendiri? 
+							<br>Sebuah kisah cinta terhalang restu orang tua yang diceritakan...</p>
+							<br>
+							<a href="berita2.html"><button class="card-btn">Lihat Selengkap Nya</button></a>
+						</p>
+					</div>
+				</div>
+	</section>
+</main>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Pustaka Pedia</h3>
+            <p>Tujuan utama Anda untuk buku di semua genre. Temukan cerita yang menginspirasi, mendidik, dan menghibur.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+
+       
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#bestsellers">Penjualan Terbaik</a></li>
+                <li><a href="#new-releases">Keluaran Terbaru</a></li>
+                <li><a href="#deals">Special Deals</a></li>
+                <li><a href="#gift-cards">Gift Cards</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Customer Service</h4>
+            <ul>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#shipping">Shipping Policy</a></li>
+                <li><a href="#returns">Returns & Exchanges</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#privacy">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Stay Updated</h4>
+            <p>Subscribe to our newsletter for updates and exclusive offers!</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Pustaka Pedia. All rights reserved.</p>
+        <div class="payment-methods">
+            
+    </div>
+</div>
+</div>
+</footer>
+</body>
+</html>
