@@ -1,0 +1,203 @@
+.games {
+    padding: 2rem;
+    background:;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+    background-image: url(gif2.gif);
+    background-size: cover;
+    background-position: center;
+    font-family: comic sans ms;
+    color: white;
+}
+
+#musicBtn{
+    border-radius: 20px;
+    font-family: comic sans ms;
+    border-color: #86c3f1;
+    background-color: #5cb6f9;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.game-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.game-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    font-family: comic sans ms;
+}
+
+.memory-game {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.memory-card {
+    aspect-ratio: 3/4;
+    background: pink;
+    border-radius: 5px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+    background: #5cb6f9;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border: 2px solid #86c3f1;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+#restart {
+    padding: 0.5rem 1rem;
+    background: #5cb6f9;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: comic sans ms;
+}
+
+#restart:hover {
+    background:#86c3f1;
+}
+
+@keyframes popupFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) rotate(-15deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(5deg);
+    }
+    70% {
+        transform: scale(0.95) rotate(-3deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+@keyframes popupContentSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    60% {
+        transform: translateY(20px);
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.popup {
+    animation: popupFadeIn 0.6s ease-out;
+}
+
+.popup-content {
+    animation: popupContentSlideIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.popup-content button {
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+
+.popup-content button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.popup-content h2 {
+    animation: rainbow 3s linear infinite;
+}
+
+@keyframes rainbow {
+    0% { color: #ff73b3; }
+    25% { color: #73ff73; }
+    50% { color: #73b3ff; }
+    75% { color: #ffff73; }
+    100% { color: #ff73b3; }
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #5cb6f9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.popup-content p {
+    color :white;
+}
+
+.popup-content button {
+    margin-top: 15px;
+    padding: 8px 20px;
+    background-color: white;
+    color: #5cb6f9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: #86c3f1;
+}
